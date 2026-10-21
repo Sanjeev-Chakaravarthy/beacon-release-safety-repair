@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.pdf
+evidence/
+config.bat
+node_modules
