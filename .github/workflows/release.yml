@@ -12,9 +12,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest -v
+
   production:
+    needs: validate
     runs-on: ubuntu-latest
     environment: production
+    permissions:
+      contents: read
     steps:
       - name: Review only, no deployment
         env:
